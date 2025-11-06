@@ -7,15 +7,16 @@
  */
 
 // Database configuration
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'your_database_name');  // Change this
-define('DB_USER', 'your_database_user');  // Change this
-define('DB_PASS', 'your_database_password');  // Change this
+define('DB_HOST', '127.0.0.1');
+define('DB_PORT', '3306');
+define('DB_NAME', 'u182465577_cleaning');
+define('DB_USER', 'u182465577_cleaning');
+define('DB_PASS', 'Cleaning123#@!');
 define('DB_CHARSET', 'utf8mb4');
 
 // Site configuration
 define('SITE_NAME', 'SparklePro Cleaning Services');
-define('SITE_URL', 'https://yourdomain.com');  // Change this to your actual domain
+define('SITE_URL', 'https://rosybrown-barracuda-297414.hostingersite.com');  // Change this to your actual domain
 
 // Paths
 define('BASE_PATH', dirname(__DIR__));
