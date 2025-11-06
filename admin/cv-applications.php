@@ -5,10 +5,10 @@
 
 $pageTitle = 'CV Applications';
 require_once __DIR__ . '/header.php';
-require_once __DIR__ . '/../../includes/helpers.php';
-require_once __DIR__ . '/../../models/CVApplication.php';
+require_once __DIR__ . '/../includes/helpers.php';
+require_once __DIR__ . '/../models/CVApplication.php';
 
-require_once __DIR__ . '/../../includes/config.php';
+require_once __DIR__ . '/../includes/config.php';
 
 $cvModel = new CVApplication();
 

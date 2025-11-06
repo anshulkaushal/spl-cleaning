@@ -2,8 +2,8 @@
 /**
  * Admin Header
  */
-require_once __DIR__ . '/../../includes/auth.php';
-require_once __DIR__ . '/../../includes/helpers.php';
+require_once __DIR__ . '/../includes/auth.php';
+require_once __DIR__ . '/../includes/helpers.php';
 
 requireAdminLogin();
 
@@ -87,4 +87,3 @@ $adminName = $_SESSION['admin_name'] ?? '';
                     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 </div>
                 <?php endif; ?>
-

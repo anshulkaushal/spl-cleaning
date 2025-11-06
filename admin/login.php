@@ -4,10 +4,10 @@
  */
 
 $pageTitle = 'Admin Login';
-require_once __DIR__ . '/../../includes/header.php';
-require_once __DIR__ . '/../../includes/auth.php';
-require_once __DIR__ . '/../../includes/helpers.php';
-require_once __DIR__ . '/../../models/AdminUser.php';
+require_once __DIR__ . '/../includes/header.php';
+require_once __DIR__ . '/../includes/auth.php';
+require_once __DIR__ . '/../includes/helpers.php';
+require_once __DIR__ . '/../models/AdminUser.php';
 
 // Redirect if already logged in
 if (isAdminLoggedIn()) {
@@ -74,5 +74,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </div>
 
-<?php require_once __DIR__ . '/../../includes/footer.php'; ?>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>
 

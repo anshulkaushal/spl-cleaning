@@ -4,11 +4,11 @@
  */
 
 $pageTitle = 'Join Our Team';
-require_once __DIR__ . '/../includes/header.php';
-require_once __DIR__ . '/../includes/helpers.php';
-require_once __DIR__ . '/../models/CVApplication.php';
+require_once __DIR__ . '/includes/header.php';
+require_once __DIR__ . '/includes/helpers.php';
+require_once __DIR__ . '/models/CVApplication.php';
 
-require_once __DIR__ . '/../includes/config.php';
+require_once __DIR__ . '/includes/config.php';
 
 $errors = [];
 $success = false;
@@ -195,5 +195,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </div>
 
-<?php require_once __DIR__ . '/../includes/footer.php'; ?>
+<?php require_once __DIR__ . '/includes/footer.php'; ?>
 

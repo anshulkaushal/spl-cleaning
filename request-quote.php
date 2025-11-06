@@ -4,12 +4,12 @@
  */
 
 $pageTitle = 'Request a Quote';
-require_once __DIR__ . '/../includes/header.php';
-require_once __DIR__ . '/../includes/auth.php';
-require_once __DIR__ . '/../includes/helpers.php';
-require_once __DIR__ . '/../models/User.php';
-require_once __DIR__ . '/../models/Service.php';
-require_once __DIR__ . '/../models/Lead.php';
+require_once __DIR__ . '/includes/header.php';
+require_once __DIR__ . '/includes/auth.php';
+require_once __DIR__ . '/includes/helpers.php';
+require_once __DIR__ . '/models/User.php';
+require_once __DIR__ . '/models/Service.php';
+require_once __DIR__ . '/models/Lead.php';
 
 $isLoggedIn = isLoggedIn();
 $user = null;
@@ -193,5 +193,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </div>
 
-<?php require_once __DIR__ . '/../includes/footer.php'; ?>
+<?php require_once __DIR__ . '/includes/footer.php'; ?>
 

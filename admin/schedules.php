@@ -5,10 +5,10 @@
 
 $pageTitle = 'Manage Schedules';
 require_once __DIR__ . '/header.php';
-require_once __DIR__ . '/../../includes/helpers.php';
-require_once __DIR__ . '/../../models/Schedule.php';
-require_once __DIR__ . '/../../models/Employee.php';
-require_once __DIR__ . '/../../models/Lead.php';
+require_once __DIR__ . '/../includes/helpers.php';
+require_once __DIR__ . '/../models/Schedule.php';
+require_once __DIR__ . '/../models/Employee.php';
+require_once __DIR__ . '/../models/Lead.php';
 
 $scheduleModel = new Schedule();
 $employeeModel = new Employee();
