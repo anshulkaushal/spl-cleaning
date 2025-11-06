@@ -3,34 +3,28 @@
 # Enable rewrite engine
 RewriteEngine On
 
-# Redirect to public directory (if using shared hosting structure)
-# Uncomment if your public files are in a subdirectory
-# RewriteRule ^$ public/ [L]
-# RewriteRule (.*) public/$1 [L]
-
 # Prevent directory listing
 Options -Indexes
 
 # Protect sensitive files
-<FilesMatch "^(config\.php|\.htaccess|\.git)">
-    Order allow,deny
-    Deny from all
+<FilesMatch "^(config\.php|\.git|\.env)">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
 </FilesMatch>
 
-# PHP settings (adjust based on your hosting)
-php_value upload_max_filesize 10M
-php_value post_max_size 10M
-php_value max_execution_time 300
-php_value max_input_time 300
-
-# Security headers
+# Security headers (if mod_headers is available)
 <IfModule mod_headers.c>
     Header set X-Content-Type-Options "nosniff"
     Header set X-Frame-Options "SAMEORIGIN"
     Header set X-XSS-Protection "1; mode=block"
 </IfModule>
 
-# Error pages (optional)
-# ErrorDocument 404 /404.php
-# ErrorDocument 500 /500.php
+# Note: PHP settings (upload_max_filesize, post_max_size, etc.) 
+# should be configured in php.ini or via Hostinger control panel
+# Some shared hosts don't allow php_value in .htaccess
 
