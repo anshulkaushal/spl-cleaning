@@ -146,22 +146,27 @@ A complete, production-ready PHP/MySQL cleaning services website designed for Ho
 
 ### Step 4: Configure Database Connection
 
-1. **Edit `/includes/config.php`** using File Manager or FTP
+1. **Copy the example config file:**
+   - If you have `config.php.example`, copy it to `config.php`
+   - Or create `config.php` based on `config.php.example`
 
-2. **Update these values:**
+2. **Edit `/includes/config.php`** using File Manager or FTP
+
+3. **Update these values:**
    ```php
-   define('DB_HOST', 'localhost');  // Usually 'localhost' on Hostinger
+   define('DB_HOST', '127.0.0.1');  // Usually '127.0.0.1' or 'localhost' on Hostinger
+   define('DB_PORT', '3306');        // MySQL port (usually 3306)
    define('DB_NAME', 'your_database_name');  // Your database name from Step 2
    define('DB_USER', 'your_database_user');  // Your database user from Step 2
    define('DB_PASS', 'your_database_password');  // Your database password from Step 2
    ```
 
-3. **Update site URL:**
+4. **Update site URL:**
    ```php
    define('SITE_URL', 'https://yourdomain.com');  // Your actual domain
    ```
 
-4. **Save the file**
+5. **Save the file**
 
 ### Step 5: Create Uploads Directory
 

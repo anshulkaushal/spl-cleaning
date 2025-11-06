@@ -1,0 +1,45 @@
+# SparklePro Cleaning Services - Git Ignore File
+
+# Configuration files with sensitive data
+includes/config.php
+
+# Uploaded files
+assets/uploads/cv/*
+!assets/uploads/cv/.gitkeep
+
+# Logs
+*.log
+logs/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Composer (if used in future)
+vendor/
+composer.lock
+
+# Node modules (if used in future)
+node_modules/
+package-lock.json
+
+# Backup files
+*.bak
+*.backup
+*.old
+
