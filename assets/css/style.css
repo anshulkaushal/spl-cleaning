@@ -1,23 +1,23 @@
 /* SparklePro Cleaning Services - Kiwi inspired main stylesheet */
 
 :root {
-    --primary-color: #19c3ff;
-    --primary-color-dark: #0984d4;
-    --accent-color: #ffe066;
-    --accent-color-dark: #f3c300;
-    --glow-color: rgba(255, 255, 255, 0.6);
-    --neutral-50: #f5fcff;
-    --neutral-100: #e7faff;
-    --neutral-200: #d4f2ff;
-    --neutral-900: #13293d;
-    --secondary-color: #4a5d73;
-    --shadow-soft: 0 22px 48px rgba(9, 132, 212, 0.18);
+    --primary-color: #1583d8;
+    --primary-color-dark: #0c5ea0;
+    --accent-color: #ffc94a;
+    --accent-color-dark: #dca425;
+    --glow-color: rgba(255, 255, 255, 0.55);
+    --neutral-50: #f4f6fa;
+    --neutral-100: #e9ecf4;
+    --neutral-200: #d6dbea;
+    --neutral-900: #1a2537;
+    --secondary-color: #314156;
+    --shadow-soft: 0 22px 48px rgba(21, 96, 160, 0.18);
 }
 
 body {
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: var(--neutral-900);
-    background-color: #fcfeff;
+    background-color: var(--neutral-50);
 }
 
 .site-header {
@@ -26,7 +26,7 @@ body {
 }
 
 .top-contact-strip {
-    background: #1a202a;
+    background: #070b13;
     color: #f7f9ff;
     font-size: 0.9rem;
     padding: 0.45rem 0;
@@ -72,10 +72,10 @@ body {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    background: rgba(26, 54, 88, 0.88);
+    background: rgba(26, 54, 88, 0.92);
     padding: 0.5rem 0.95rem;
     border-radius: 16px;
-    box-shadow: 0 16px 36px rgba(12, 47, 76, 0.18);
+    box-shadow: 0 16px 36px rgba(12, 47, 76, 0.3);
 }
 
 .brand-icon {
@@ -85,7 +85,7 @@ body {
     width: 48px;
     height: 48px;
     border-radius: 12px;
-    background: linear-gradient(135deg, rgba(149, 227, 255, 0.92), rgba(215, 247, 192, 0.92));
+    background: linear-gradient(135deg, rgba(42, 152, 255, 0.95), rgba(134, 205, 255, 0.95));
     color: #fff;
     font-size: 1.6rem;
 }
@@ -107,7 +107,7 @@ body {
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.78);
 }
 
 .navbar-toggler {
@@ -120,10 +120,10 @@ body {
 }
 
 #mainNav {
-    background: linear-gradient(90deg, rgba(170, 233, 255, 0.94) 0%, rgba(224, 246, 210, 0.94) 100%);
+    background: linear-gradient(90deg, rgba(78, 182, 255, 0.95) 0%, rgba(132, 207, 255, 0.95) 45%, rgba(178, 228, 190, 0.95) 100%);
     border-radius: 18px;
     padding: 0.25rem 0.5rem;
-    box-shadow: 0 20px 42px rgba(8, 76, 122, 0.2);
+    box-shadow: 0 22px 48px rgba(9, 75, 122, 0.25);
 }
 
 #mainNav.show {
@@ -147,7 +147,7 @@ body {
 
 #mainNav .nav-link {
     font-weight: 600;
-    color: #ffffff;
+    color: rgba(255, 255, 255, 0.92);
     padding: 0.85rem 1.1rem;
     border-radius: 12px;
     transition: background 0.2s ease, color 0.2s ease;
@@ -155,8 +155,12 @@ body {
 
 #mainNav .nav-link:hover,
 #mainNav .nav-link.active {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.28);
     color: #ffffff;
+}
+
+#mainNav .nav-link.active {
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
 }
 
 #mainNav .dropdown-toggle::after {
@@ -171,8 +175,8 @@ body {
 }
 
 #mainNav .dropdown-item {
-    font-weight: 500;
-    padding: 0.5rem 1.25rem;
+    font-weight: 600;
+    padding: 0.6rem 1.25rem;
 }
 
 #mainNav .dropdown-item:hover {
@@ -184,7 +188,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.97);
+    background: #ffffff;
     color: var(--primary-color-dark);
     padding: 0.6rem 1.5rem;
     border-radius: 999px;
@@ -207,9 +211,9 @@ body {
     }
 
     #mainNav {
-        border-radius: 12px;
+        border-radius: 14px;
         margin-top: 1rem;
-        padding: 0.75rem;
+        padding: 0.85rem;
     }
 
     #mainNav.show {
@@ -234,7 +238,7 @@ body {
 }
 
 .hero-section {
-    background: linear-gradient(135deg, rgba(25, 195, 255, 0.85) 0%, rgba(9, 132, 212, 0.9) 100%),
+    background: linear-gradient(135deg, rgba(104, 198, 255, 0.9) 0%, rgba(42, 148, 233, 0.9) 60%, rgba(74, 205, 222, 0.95) 100%),
                 url('https://images.unsplash.com/photo-1585421514738-01798e348b17?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
     color: #fff;
     padding: 96px 0;
@@ -329,8 +333,8 @@ body {
     display: grid;
     place-items: center;
     margin: 0 auto;
-    background: linear-gradient(135deg, rgba(31, 195, 255, 0.18), rgba(255, 255, 255, 0.55));
-    color: var(--primary-color);
+    background: linear-gradient(135deg, rgba(31, 195, 255, 0.24), rgba(255, 255, 255, 0.6));
+    color: var(--primary-color-dark);
     font-size: 2rem;
 }
 
@@ -544,14 +548,14 @@ footer a:hover {
 .form-select {
     border-radius: 0.85rem;
     padding: 0.8rem 1rem;
-    border: 1px solid rgba(25, 195, 255, 0.25);
-    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(21, 131, 216, 0.3);
+    background-color: rgba(255, 255, 255, 0.97);
 }
 
 .form-control:focus,
 .form-select:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.25rem rgba(25, 195, 255, 0.28);
+    box-shadow: 0 0 0 0.25rem rgba(21, 131, 216, 0.3);
 }
 
 .form-label {
@@ -618,6 +622,10 @@ footer a:hover {
 
 .text-accent {
     color: var(--accent-color-dark);
+}
+
+.text-secondary {
+    color: #2f3d4f !important;
 }
 
 .divider {

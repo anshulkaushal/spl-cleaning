@@ -55,6 +55,16 @@ $detailBlocks = [
         'Precision mowing, edging and clean-up for residential, commercial and lifestyle blocks.',
         'Seasonal fertilising, weed control and hedging packages available.',
         'Flexible maintenance schedules to keep outdoor areas presentation-ready.'
+    ],
+    'Window Cleaning' => [
+        'Interior and exterior glass polished with streak-free, pure-water systems.',
+        'Includes frames, sills, flyscreens and high-reach glazing where access allows.',
+        'Ideal pre-sale or quarterly maintenance service for a brighter presentation.'
+    ],
+    'Disinfection & Sanitisation' => [
+        'Fogging and touchpoint sanitisation programmes compliant with MOH recommendations.',
+        'Food-safe products suitable for hospitality, healthcare and education environments.',
+        'Scheduled or rapid-response options to keep premises safe and operational.'
     ]
 ];
 ?>

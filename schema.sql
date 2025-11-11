@@ -172,6 +172,14 @@ INSERT INTO `services` (`name`, `description`, `base_price`, `icon`)
 SELECT 'Lawn Mowing', 'Professional lawn mowing and edging that keeps outdoor areas pristine.', 80.00, 'tree'
 WHERE NOT EXISTS (SELECT 1 FROM `services` WHERE `name` = 'Lawn Mowing');
 
+INSERT INTO `services` (`name`, `description`, `base_price`, `icon`)
+SELECT 'Window Cleaning', 'Interior and exterior glass polished with streak-free, pure-water systems.', 110.00, 'window'
+WHERE NOT EXISTS (SELECT 1 FROM `services` WHERE `name` = 'Window Cleaning');
+
+INSERT INTO `services` (`name`, `description`, `base_price`, `icon`)
+SELECT 'Disinfection & Sanitisation', 'Fogging and touchpoint programmes compliant with Ministry of Health recommendations.', 170.00, 'shield-check'
+WHERE NOT EXISTS (SELECT 1 FROM `services` WHERE `name` = 'Disinfection & Sanitisation');
+
 -- Insert sample employees
 INSERT INTO `employees` (`name`, `email`, `phone`, `role`, `active_status`) VALUES
 ('John Smith', 'john.smith@sparklepro.com', '555-0101', 'Cleaner', 1),
