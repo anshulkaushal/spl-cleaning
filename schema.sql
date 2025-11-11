@@ -138,18 +138,17 @@ INSERT INTO `admin_users` (`name`, `email`, `password_hash`) VALUES
 
 -- Insert sample services
 INSERT INTO `services` (`name`, `description`, `base_price`, `icon`) VALUES
-('House Cleaning', 'Regular house cleaning service for your home', 80.00, 'home'),
-('Office Cleaning', 'Professional office cleaning services', 150.00, 'briefcase'),
-('Move-In/Move-Out Clean', 'Deep cleaning for moving in or out', 200.00, 'truck'),
-('Deep Cleaning', 'Thorough deep cleaning service', 250.00, 'sparkles'),
-('Carpet Cleaning', 'Professional carpet and rug cleaning', 120.00, 'carpet'),
-('Window Cleaning', 'Interior and exterior window cleaning', 100.00, 'window'),
-('Construction Clean', 'Post-construction cleanup service', 300.00, 'hammer'),
-('Regular Maintenance', 'Weekly or bi-weekly maintenance cleaning', 70.00, 'calendar');
+('Commercial Cleaning', 'Comprehensive cleaning programmes designed for workplaces and commercial sites.', 185.00, 'buildings'),
+('Carpet Cleaning', 'Eco-friendly carpet treatments that lift allergens and restore softness.', 120.00, 'layers'),
+('Upholstery Cleaning', 'Specialist upholstery refresh using modern tools and safe cleaning agents.', 95.00, 'sofa'),
+('End of Tenancy Cleaning', 'Detailed move-out cleans that help properties pass the final inspection.', 210.00, 'house-check'),
+('Builders Cleaning', 'Post-construction detailing that removes dust, debris, and safety hazards.', 260.00, 'tools'),
+('Pressure Washing', 'High-pressure exterior washing to eliminate grime, mould, and buildup.', 150.00, 'water'),
+('Gutter Cleaning', 'Full gutter and downpipe clearing to keep water moving freely.', 130.00, 'cloud-rain'),
+('Lawn Mowing', 'Professional lawn mowing and edging that keeps outdoor areas pristine.', 80.00, 'tree');
 
 -- Insert sample employees
 INSERT INTO `employees` (`name`, `email`, `phone`, `role`, `active_status`) VALUES
 ('John Smith', 'john.smith@sparklepro.com', '555-0101', 'Cleaner', 1),
 ('Sarah Johnson', 'sarah.johnson@sparklepro.com', '555-0102', 'Supervisor', 1),
 ('Mike Davis', 'mike.davis@sparklepro.com', '555-0103', 'Cleaner', 1);
-

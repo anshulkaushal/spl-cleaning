@@ -16,7 +16,7 @@ class Service {
      * Get all services
      */
     public function getAll() {
-        $stmt = $this->db->query("SELECT * FROM services ORDER BY name");
+        $stmt = $this->db->query("SELECT * FROM services ORDER BY id");
         return $stmt->fetchAll();
     }
 

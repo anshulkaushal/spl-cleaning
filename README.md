@@ -20,10 +20,10 @@ A complete, production-ready PHP/MySQL cleaning services website designed for Ho
   - Comprehensive reports (workload, tasks, leads)
 
 - **Public Features:**
-  - Modern, responsive design with Bootstrap
-  - Service listings
+  - Modern, responsive design with Kiwi-inspired green palette
+  - Comprehensive service catalogue covering interior, exterior and grounds care
   - CV upload for job applications
-  - Contact and quote request forms
+  - Streamlined contact and quote request experience
 
 ## Technology Stack
 
@@ -36,31 +36,31 @@ A complete, production-ready PHP/MySQL cleaning services website designed for Ho
 
 ```
 /
-├── public/                 # Entry points (publicly accessible)
-│   ├── index.php          # Home page
-│   ├── services.php       # Services listing
-│   ├── register.php      # User registration
-│   ├── login.php          # User login
-│   ├── logout.php         # User logout
-│   ├── account.php        # User account dashboard
-│   ├── request-quote.php # Quote/callback request
-│   ├── join-our-team.php # CV upload page
-│   └── admin/             # Admin area
-│       ├── login.php      # Admin login
-│       ├── index.php      # Admin dashboard
-│       ├── leads.php      # Lead management
-│       ├── employees.php  # Employee management
-│       ├── schedules.php  # Schedule management
-│       ├── cv-applications.php # CV management
-│       └── reports.php    # Reports
-├── includes/              # Core includes
-│   ├── config.php         # Configuration (UPDATE THIS!)
-│   ├── db.php             # Database connection
-│   ├── auth.php           # Authentication functions
-│   ├── helpers.php        # Helper functions
-│   ├── header.php         # Site header
-│   └── footer.php         # Site footer
-├── models/                # Data models
+├── index.php               # Home page
+├── services.php            # Service catalogue
+├── register.php            # User registration
+├── login.php               # User login
+├── logout.php              # User logout
+├── account.php             # User account dashboard
+├── request-quote.php       # Quote/callback request form
+├── join-our-team.php       # Job application page
+├── admin/                  # Admin area entry points
+│   ├── login.php           # Admin login
+│   ├── index.php           # Dashboard
+│   ├── leads.php           # Lead management
+│   ├── employees.php       # Employee CRM
+│   ├── schedules.php       # Job scheduling
+│   ├── cv-applications.php # CV management
+│   └── reports.php         # Analytics & reporting
+├── includes/               # Re-usable includes
+│   ├── config.php          # Configuration (copy from config.php.example)
+│   ├── config.php.example  # Sample configuration
+│   ├── db.php              # PDO connection wrapper
+│   ├── auth.php            # Authentication helpers
+│   ├── helpers.php         # Utility helpers
+│   ├── header.php          # Global header/navigation
+│   └── footer.php          # Global footer
+├── models/                 # Data models (PDO abstractions)
 │   ├── User.php
 │   ├── Service.php
 │   ├── Lead.php
@@ -68,18 +68,18 @@ A complete, production-ready PHP/MySQL cleaning services website designed for Ho
 │   ├── Schedule.php
 │   ├── CVApplication.php
 │   └── AdminUser.php
-├── assets/                # Static assets
+├── assets/
 │   ├── css/
-│   │   ├── style.css      # Main stylesheet
-│   │   └── admin.css      # Admin stylesheet
+│   │   ├── style.css       # Public theme (Kiwi Clean & Green inspired)
+│   │   └── admin.css       # Admin area styling
 │   ├── js/
-│   │   ├── main.js        # Main JavaScript
-│   │   └── admin.js       # Admin JavaScript
+│   │   ├── main.js         # Public scripts
+│   │   └── admin.js        # Admin scripts
 │   └── uploads/
-│       └── cv/            # CV uploads directory (create with 755 permissions)
-├── schema.sql             # Database schema
-├── .htaccess              # Apache configuration
-└── README.md              # This file
+│       └── cv/             # CV upload target (ensure 755 permissions)
+├── schema.sql              # Database schema with seed data
+├── .htaccess               # Apache configuration
+└── README.md               # This guide
 ```
 
 ## Deployment Instructions for Hostinger
@@ -93,18 +93,9 @@ A complete, production-ready PHP/MySQL cleaning services website designed for Ho
    - Alternative: Use FTP client (FileZilla, WinSCP, etc.)
 
 3. **Upload files to your domain's root directory (`public_html/`):**
-   
-   **Option A: Simple Structure (Recommended for Hostinger)**
-   - Upload contents of `/public/` folder directly to `public_html/`
-   - Upload `/includes/` folder to `public_html/includes/`
-   - Upload `/models/` folder to `public_html/models/`
-   - Upload `/assets/` folder to `public_html/assets/`
-   - Upload `schema.sql` and `.htaccess` to `public_html/`
-   
-   **Option B: Keep Project Structure**
-   - Upload entire project to `public_html/`
-   - Update paths in `includes/header.php` and `includes/footer.php` if needed
-   - Or configure `.htaccess` to rewrite URLs (advanced)
+   - Upload all root `.php` files (index.php, services.php, etc.) directly into `public_html/`
+   - Upload the `admin/`, `includes/`, `models/`, and `assets/` folders to the same level
+   - Upload `.htaccess`, `schema.sql`, and any other supporting files to `public_html/`
 
 4. **Set proper permissions:**
    - Folders: `755`
@@ -143,6 +134,7 @@ A complete, production-ready PHP/MySQL cleaning services website designed for Ho
 
 6. **Verify tables were created:**
    - You should see: `users`, `admin_users`, `services`, `employees`, `leads`, `employee_schedules`, `cv_applications`
+   - The `services` table will be pre-populated with: Commercial Cleaning, Carpet Cleaning, Upholstery Cleaning, End of Tenancy Cleaning, Builders Cleaning, Pressure Washing, Gutter Cleaning, Lawn Mowing
 
 ### Step 4: Configure Database Connection
 
@@ -263,6 +255,6 @@ This project is provided as-is for use with SparklePro Cleaning Services.
 
 ---
 
-**Last Updated:** 2024
-**Version:** 1.0.0
+**Last Updated:** 2025
+**Version:** 1.1.0
 
