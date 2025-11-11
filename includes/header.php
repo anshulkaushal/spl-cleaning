@@ -57,7 +57,7 @@ $userName = $_SESSION['user_name'] ?? '';
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <nav class="collapse navbar-collapse" id="mainNav">
+                    <nav class="collapse navbar-collapse show" id="mainNav">
                         <ul class="navbar-nav ms-auto align-items-lg-center">
                             <li class="nav-item">
                                 <a class="nav-link <?php echo $currentPage === 'index.php' ? 'active' : ''; ?>" href="/">Home</a>
