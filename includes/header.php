@@ -28,74 +28,88 @@ $userName = $_SESSION['user_name'] ?? '';
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    <div class="top-bar d-none d-lg-block">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center gap-3">
-                <span><i class="bi bi-telephone-outbound"></i> +64 210 258 8777</span>
-                <span class="d-none d-lg-inline"><i class="bi bi-envelope-open"></i> hello@sparklepro.co.nz</span>
-                <span class="d-none d-xl-inline"><i class="bi bi-geo-alt"></i> Serving Wellington, Lower Hutt, Upper Hutt & Porirua</span>
-            </div>
-            <div class="d-flex align-items-center gap-3">
-                <a href="/request-quote?callback=1" class="text-white"><i class="bi bi-clock-history"></i> Request a call back</a>
-                <a href="/request-quote" class="pill text-decoration-none">Book an appointment</a>
+    <header class="site-header">
+        <div class="top-contact-strip">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-4 flex-wrap">
+                    <span><i class="bi bi-telephone-fill me-2"></i>+64 210 258 8777</span>
+                    <span><i class="bi bi-envelope-fill me-2"></i>contact@sparklepro.co.nz</span>
+                    <span class="d-none d-md-inline"><i class="bi bi-geo-alt-fill me-2"></i>Wellington Region, New Zealand</span>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="/request-quote?callback=1" class="contact-link">Request a call back</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2" href="/">
-                <span class="badge bg-white text-primary fw-bold"><i class="bi bi-droplet-half"></i></span>
-                <span>SparklePro</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-                    <li class="nav-item">
-                        <a class="nav-link <?php echo $currentPage === 'index.php' ? 'active' : ''; ?>" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?php echo $currentPage === 'services.php' ? 'active' : ''; ?>" href="/services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/#areas">Service Areas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link <?php echo $currentPage === 'join-our-team.php' ? 'active' : ''; ?>" href="/join-our-team">Join Our Team</a>
-                    </li>
-                    <?php if ($isLoggedIn): ?>
-                        <li class="nav-item">
-                            <a class="nav-link <?php echo $currentPage === 'account.php' ? 'active' : ''; ?>" href="/account">
-                                <i class="bi bi-person-circle"></i> My Account
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/logout">Logout</a>
-                        </li>
-                    <?php else: ?>
-                        <li class="nav-item">
-                            <a class="nav-link <?php echo $currentPage === 'login.php' ? 'active' : ''; ?>" href="/login">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link <?php echo $currentPage === 'register.php' ? 'active' : ''; ?>" href="/register">Register</a>
-                        </li>
-                    <?php endif; ?>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary" href="/request-quote">
-                            <i class="bi bi-calendar-check"></i> Get a quote
-                        </a>
-                    </li>
-                </ul>
+        <div class="nav-bar-wrap sticky-top">
+            <div class="container">
+                <div class="nav-inner">
+                    <a class="brand-logo" href="/">
+                        <div class="brand-mark">
+                            <span class="brand-icon"><i class="bi bi-buildings"></i></span>
+                            <div class="brand-text">
+                                <span class="brand-name">SparklePro</span>
+                                <span class="brand-tagline">Cleaning Services</span>
+                            </div>
+                        </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <nav class="collapse navbar-collapse" id="mainNav">
+                        <ul class="navbar-nav ms-auto align-items-lg-center">
+                            <li class="nav-item">
+                                <a class="nav-link <?php echo $currentPage === 'index.php' ? 'active' : ''; ?>" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/#about">About Us</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle <?php echo $currentPage === 'services.php' ? 'active' : ''; ?>" href="/services" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Services
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                    <li><a class="dropdown-item" href="/services#service-commercial-cleaning">Commercial Cleaning</a></li>
+                                    <li><a class="dropdown-item" href="/services#service-carpet-cleaning">Carpet Cleaning</a></li>
+                                    <li><a class="dropdown-item" href="/services#service-pressure-washing">Pressure Washing</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/blogs">Blogs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/#testimonials">Testimonials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact">Contact Us</a>
+                            </li>
+                            <?php if ($isLoggedIn): ?>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/account"><i class="bi bi-person-circle me-1"></i>My Account</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/logout">Logout</a>
+                                </li>
+                            <?php else: ?>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/login">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/register">Register</a>
+                                </li>
+                            <?php endif; ?>
+                            <li class="nav-item ms-lg-3">
+                                <a class="btn btn-quote" href="/request-quote">Get a Quote</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
-    </nav>
+    </header>
     
-    <main style="margin-top: 112px;">
+    <main class="page-content">
         <?php
         // Display flash messages
         $flash = getFlashMessage();
