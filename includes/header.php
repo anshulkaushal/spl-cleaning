@@ -69,11 +69,20 @@ $userName = $_SESSION['user_name'] ?? '';
                                 <a class="nav-link dropdown-toggle <?php echo $currentPage === 'services.php' ? 'active' : ''; ?>" href="/services" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Services
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                    <li><a class="dropdown-item" href="/services#service-commercial-cleaning">Commercial Cleaning</a></li>
-                                    <li><a class="dropdown-item" href="/services#service-carpet-cleaning">Carpet Cleaning</a></li>
-                                    <li><a class="dropdown-item" href="/services#service-pressure-washing">Pressure Washing</a></li>
-                                </ul>
+                                <div class="dropdown-menu services-dropdown" aria-labelledby="servicesDropdown">
+                                    <div class="services-dropdown-grid">
+                                        <a class="dropdown-item" href="/services#service-commercial-cleaning">Commercial Cleaning</a>
+                                        <a class="dropdown-item" href="/services#service-carpet-cleaning">Carpet Cleaning</a>
+                                        <a class="dropdown-item" href="/services#service-upholstery-cleaning">Upholstery Cleaning</a>
+                                        <a class="dropdown-item" href="/services#service-end-of-tenancy-cleaning">End of Tenancy Cleaning</a>
+                                        <a class="dropdown-item" href="/services#service-builders-cleaning">Builders Cleaning</a>
+                                        <a class="dropdown-item" href="/services#service-pressure-washing">Pressure Washing</a>
+                                        <a class="dropdown-item" href="/services#service-gutter-cleaning">Gutter Cleaning</a>
+                                        <a class="dropdown-item" href="/services#service-lawn-mowing">Lawn Mowing</a>
+                                        <a class="dropdown-item" href="/services#service-window-cleaning">Window Cleaning</a>
+                                        <a class="dropdown-item" href="/services#service-disinfection-sanitisation">Disinfection &amp; Sanitisation</a>
+                                    </div>
+                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/blogs">Blogs</a>
