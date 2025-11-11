@@ -133,19 +133,44 @@ CREATE TABLE IF NOT EXISTS `cv_applications` (
 
 -- Insert default admin user (password: admin123 - CHANGE THIS AFTER FIRST LOGIN!)
 -- Password hash for 'admin123'
-INSERT INTO `admin_users` (`name`, `email`, `password_hash`) VALUES
-('Admin User', 'admin@sparklepro.com', '$2y$12$ilN0wY8eu/T9H1FMsOsvreXEDAfVQq7lhdYczVwQ35ZB6A5zED0SC');
+INSERT INTO `admin_users` (`name`, `email`, `password_hash`)
+SELECT 'Admin User', 'admin@sparklepro.com', '$2y$12$ilN0wY8eu/T9H1FMsOsvreXEDAfVQq7lhdYczVwQ35ZB6A5zED0SC'
+WHERE NOT EXISTS (
+    SELECT 1 FROM `admin_users` WHERE `email` = 'admin@sparklepro.com'
+);
 
 -- Insert sample services
-INSERT INTO `services` (`name`, `description`, `base_price`, `icon`) VALUES
-('Commercial Cleaning', 'Comprehensive cleaning programmes designed for workplaces and commercial sites.', 185.00, 'buildings'),
-('Carpet Cleaning', 'Eco-friendly carpet treatments that lift allergens and restore softness.', 120.00, 'layers'),
-('Upholstery Cleaning', 'Specialist upholstery refresh using modern tools and safe cleaning agents.', 95.00, 'sofa'),
-('End of Tenancy Cleaning', 'Detailed move-out cleans that help properties pass the final inspection.', 210.00, 'house-check'),
-('Builders Cleaning', 'Post-construction detailing that removes dust, debris, and safety hazards.', 260.00, 'tools'),
-('Pressure Washing', 'High-pressure exterior washing to eliminate grime, mould, and buildup.', 150.00, 'water'),
-('Gutter Cleaning', 'Full gutter and downpipe clearing to keep water moving freely.', 130.00, 'cloud-rain'),
-('Lawn Mowing', 'Professional lawn mowing and edging that keeps outdoor areas pristine.', 80.00, 'tree');
+INSERT INTO `services` (`name`, `description`, `base_price`, `icon`)
+SELECT 'Commercial Cleaning', 'Comprehensive cleaning programmes designed for workplaces and commercial sites.', 185.00, 'buildings'
+WHERE NOT EXISTS (SELECT 1 FROM `services` WHERE `name` = 'Commercial Cleaning');
+
+INSERT INTO `services` (`name`, `description`, `base_price`, `icon`)
+SELECT 'Carpet Cleaning', 'Eco-friendly carpet treatments that lift allergens and restore softness.', 120.00, 'layers'
+WHERE NOT EXISTS (SELECT 1 FROM `services` WHERE `name` = 'Carpet Cleaning');
+
+INSERT INTO `services` (`name`, `description`, `base_price`, `icon`)
+SELECT 'Upholstery Cleaning', 'Specialist upholstery refresh using modern tools and safe cleaning agents.', 95.00, 'sofa'
+WHERE NOT EXISTS (SELECT 1 FROM `services` WHERE `name` = 'Upholstery Cleaning');
+
+INSERT INTO `services` (`name`, `description`, `base_price`, `icon`)
+SELECT 'End of Tenancy Cleaning', 'Detailed move-out cleans that help properties pass the final inspection.', 210.00, 'house-check'
+WHERE NOT EXISTS (SELECT 1 FROM `services` WHERE `name` = 'End of Tenancy Cleaning');
+
+INSERT INTO `services` (`name`, `description`, `base_price`, `icon`)
+SELECT 'Builders Cleaning', 'Post-construction detailing that removes dust, debris, and safety hazards.', 260.00, 'tools'
+WHERE NOT EXISTS (SELECT 1 FROM `services` WHERE `name` = 'Builders Cleaning');
+
+INSERT INTO `services` (`name`, `description`, `base_price`, `icon`)
+SELECT 'Pressure Washing', 'High-pressure exterior washing to eliminate grime, mould, and buildup.', 150.00, 'water'
+WHERE NOT EXISTS (SELECT 1 FROM `services` WHERE `name` = 'Pressure Washing');
+
+INSERT INTO `services` (`name`, `description`, `base_price`, `icon`)
+SELECT 'Gutter Cleaning', 'Full gutter and downpipe clearing to keep water moving freely.', 130.00, 'cloud-rain'
+WHERE NOT EXISTS (SELECT 1 FROM `services` WHERE `name` = 'Gutter Cleaning');
+
+INSERT INTO `services` (`name`, `description`, `base_price`, `icon`)
+SELECT 'Lawn Mowing', 'Professional lawn mowing and edging that keeps outdoor areas pristine.', 80.00, 'tree'
+WHERE NOT EXISTS (SELECT 1 FROM `services` WHERE `name` = 'Lawn Mowing');
 
 -- Insert sample employees
 INSERT INTO `employees` (`name`, `email`, `phone`, `role`, `active_status`) VALUES
