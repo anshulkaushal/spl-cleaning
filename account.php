@@ -48,7 +48,7 @@ $leads = $leadModel->getByUserId(getCurrentUserId());
                 <div class="card-body">
                     <?php if (empty($leads)): ?>
                     <p class="text-muted">You haven't submitted any quote requests yet.</p>
-                    <a href="/request-quote.php" class="btn btn-primary">Request a Quote</a>
+                    <a href="/request-quote" class="btn btn-primary">Request a Quote</a>
                     <?php else: ?>
                     <div class="table-responsive">
                         <table class="table">

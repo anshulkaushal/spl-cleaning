@@ -19,9 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $role = sanitize($_POST['role']);
         
         if ($employeeModel->create($name, $email, $phone, $role)) {
-            redirectWithMessage('/admin/employees.php', 'Employee created successfully');
+            redirectWithMessage('/admin/employees', 'Employee created successfully');
         } else {
-            redirectWithMessage('/admin/employees.php', 'Failed to create employee', 'error');
+            redirectWithMessage('/admin/employees', 'Failed to create employee', 'error');
         }
     } elseif (isset($_POST['update_employee'])) {
         $id = intval($_POST['employee_id']);
@@ -34,16 +34,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ];
         
         if ($employeeModel->update($id, $data)) {
-            redirectWithMessage('/admin/employees.php', 'Employee updated successfully');
+            redirectWithMessage('/admin/employees', 'Employee updated successfully');
         } else {
-            redirectWithMessage('/admin/employees.php', 'Failed to update employee', 'error');
+            redirectWithMessage('/admin/employees', 'Failed to update employee', 'error');
         }
     } elseif (isset($_POST['delete_employee'])) {
         $id = intval($_POST['employee_id']);
         if ($employeeModel->delete($id)) {
-            redirectWithMessage('/admin/employees.php', 'Employee deleted successfully');
+            redirectWithMessage('/admin/employees', 'Employee deleted successfully');
         } else {
-            redirectWithMessage('/admin/employees.php', 'Failed to delete employee', 'error');
+            redirectWithMessage('/admin/employees', 'Failed to delete employee', 'error');
         }
     }
 }

@@ -11,7 +11,7 @@ require_once __DIR__ . '/models/User.php';
 
 // Redirect if already logged in
 if (isLoggedIn()) {
-    header('Location: /account.php');
+    header('Location: /account');
     exit;
 }
 
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         if ($user) {
             loginUser($user['id'], $user['email'], $user['name']);
-            $redirect = $_GET['redirect'] ?? '/account.php';
+            $redirect = $_GET['redirect'] ?? '/account';
             header('Location: ' . $redirect);
             exit;
         } else {
@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </form>
 
                     <div class="text-center mt-3">
-                        <p>Don't have an account? <a href="/register.php">Register here</a></p>
+                        <p>Don't have an account? <a href="/register">Register here</a></p>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@ require_once __DIR__ . '/../models/AdminUser.php';
 
 // Redirect if already logged in
 if (isAdminLoggedIn()) {
-    header('Location: /admin/index.php');
+    header('Location: /admin/');
     exit;
 }
 
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         if ($admin) {
             loginAdmin($admin['id'], $admin['email'], $admin['name']);
-            header('Location: /admin/index.php');
+            header('Location: /admin/');
             exit;
         } else {
             $error = 'Invalid email or password';

@@ -29,7 +29,7 @@ function isAdminLoggedIn() {
  */
 function requireLogin() {
     if (!isLoggedIn()) {
-        header('Location: /login.php');
+        header('Location: /login');
         exit;
     }
 }
@@ -39,7 +39,7 @@ function requireLogin() {
  */
 function requireAdminLogin() {
     if (!isAdminLoggedIn()) {
-        header('Location: /admin/login.php');
+        header('Location: /admin/login');
         exit;
     }
 }

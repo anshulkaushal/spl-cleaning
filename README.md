@@ -178,14 +178,14 @@ A complete, production-ready PHP/MySQL cleaning services website designed for Ho
    - You should see the home page
 
 2. **Test admin login:**
-   - Go to: `https://yourdomain.com/admin/login.php`
+   - Go to: `https://yourdomain.com/admin/login`
    - **Default credentials:**
      - Email: `admin@sparklepro.com`
      - Password: `admin123`
    - **⚠️ IMPORTANT: Change these credentials immediately after first login!**
 
 3. **Test user registration:**
-   - Go to: `https://yourdomain.com/register.php`
+   - Go to: `https://yourdomain.com/register`
    - Create a test account
 
 ### Step 7: Security Checklist

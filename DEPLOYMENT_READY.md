@@ -88,8 +88,8 @@ All files have been corrected and are ready for Hostinger deployment. The struct
 
 ## After Deployment:
 
-- ✅ All pages should work: `/login.php`, `/register.php`, `/services.php`, etc.
-- ✅ Admin area: `/admin/login.php`
+- ✅ All pages should work: `/login`, `/register`, `/services`, etc.
+- ✅ Admin area: `/admin/login`
 - ✅ No more 404 errors!
 
 The old `/public/` folder can be ignored or deleted - it's no longer needed.

@@ -27,12 +27,12 @@ $adminName = $_SESSION['admin_name'] ?? '';
 <body>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/admin/index.php">
+            <a class="navbar-brand" href="/admin/">
                 <i class="bi bi-sparkles"></i> SparklePro Admin
             </a>
             <div class="d-flex">
                 <span class="navbar-text me-3">Welcome, <?php echo htmlspecialchars($adminName); ?></span>
-                <a href="/admin/logout.php" class="btn btn-outline-light btn-sm">Logout</a>
+                <a href="/admin/logout" class="btn btn-outline-light btn-sm">Logout</a>
             </div>
         </div>
     </nav>
@@ -43,32 +43,32 @@ $adminName = $_SESSION['admin_name'] ?? '';
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link <?php echo $currentPage === 'index.php' ? 'active' : ''; ?>" href="/admin/index.php">
+                            <a class="nav-link <?php echo $currentPage === 'index.php' ? 'active' : ''; ?>" href="/admin/">
                                 <i class="bi bi-speedometer2"></i> Dashboard
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo $currentPage === 'leads.php' ? 'active' : ''; ?>" href="/admin/leads.php">
+                            <a class="nav-link <?php echo $currentPage === 'leads.php' ? 'active' : ''; ?>" href="/admin/leads">
                                 <i class="bi bi-inbox"></i> Leads
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo $currentPage === 'employees.php' ? 'active' : ''; ?>" href="/admin/employees.php">
+                            <a class="nav-link <?php echo $currentPage === 'employees.php' ? 'active' : ''; ?>" href="/admin/employees">
                                 <i class="bi bi-people"></i> Employees
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo $currentPage === 'schedules.php' ? 'active' : ''; ?>" href="/admin/schedules.php">
+                            <a class="nav-link <?php echo $currentPage === 'schedules.php' ? 'active' : ''; ?>" href="/admin/schedules">
                                 <i class="bi bi-calendar"></i> Schedules
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo $currentPage === 'cv-applications.php' ? 'active' : ''; ?>" href="/admin/cv-applications.php">
+                            <a class="nav-link <?php echo $currentPage === 'cv-applications.php' ? 'active' : ''; ?>" href="/admin/cv-applications">
                                 <i class="bi bi-file-earmark-person"></i> CV Applications
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo $currentPage === 'reports.php' ? 'active' : ''; ?>" href="/admin/reports.php">
+                            <a class="nav-link <?php echo $currentPage === 'reports.php' ? 'active' : ''; ?>" href="/admin/reports">
                                 <i class="bi bi-graph-up"></i> Reports
                             </a>
                         </li>

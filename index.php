@@ -19,7 +19,7 @@ $featuredServices = array_slice($services, 0, 6);
         <div class="row align-items-center g-5">
             <div class="col-lg-6">
                 <span class="badge bg-white text-primary mb-3 text-uppercase">Certified green cleaning</span>
-                <h1 class="display-5 mb-4">Healthier Living & Working Environments Across Manawatū & Beyond</h1>
+                <h1 class="display-5 mb-4">Healthier Living & Working Environments Across Wellington</h1>
                 <p class="lead mb-4">From commercial sites and build cleans to carpets, guttering and lawn care, SparklePro delivers multi-trade expertise under one dependable brand.</p>
                 <ul class="list-check mb-4">
                     <li><span class="icon-wrap"><i class="bi bi-patch-check-fill"></i></span>Highly trained, vetted & insured teams</li>
@@ -27,8 +27,8 @@ $featuredServices = array_slice($services, 0, 6);
                     <li><span class="icon-wrap"><i class="bi bi-bounding-box-circles"></i></span>Flexible scheduling that works around you</li>
                 </ul>
                 <div class="d-flex flex-column flex-sm-row gap-3">
-                    <a href="/request-quote.php" class="btn btn-primary btn-lg"><i class="bi bi-calendar2-check"></i> Book an appointment</a>
-                    <a href="/services.php" class="btn btn-outline-primary btn-lg"><i class="bi bi-grid"></i> Explore services</a>
+                    <a href="/request-quote" class="btn btn-primary btn-lg"><i class="bi bi-calendar2-check"></i> Book an appointment</a>
+                    <a href="/services#service-commercial-cleaning" class="btn btn-outline-primary btn-lg"><i class="bi bi-grid"></i> Explore services</a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -60,9 +60,9 @@ $featuredServices = array_slice($services, 0, 6);
                                 <span class="badge badge-accent"><i class="bi bi-clock-history"></i> Live roster</span>
                             </div>
                             <ul class="list-unstyled mb-0 small d-grid gap-2">
-                                <li><i class="bi bi-check-circle text-accent"></i> 07:30 – Builders clean, Ashhurst</li>
-                                <li><i class="bi bi-check-circle text-accent"></i> 11:00 – Commercial lobby polish, Levin</li>
-                                <li><i class="bi bi-check-circle text-accent"></i> 14:30 – Rental exit clean, Feilding</li>
+                                <li><i class="bi bi-check-circle text-accent"></i> 07:30 – Apartment sparkle, Te Aro</li>
+                                <li><i class="bi bi-check-circle text-accent"></i> 11:00 – Office lobby polish, Lower Hutt</li>
+                                <li><i class="bi bi-check-circle text-accent"></i> 14:30 – Rental exit clean, Porirua</li>
                             </ul>
                         </div>
                     </div>
@@ -156,14 +156,14 @@ $featuredServices = array_slice($services, 0, 6);
                         <?php if ($service['base_price']): ?>
                         <p class="mb-3"><span class="pill">From $<?php echo number_format($service['base_price'], 2); ?></span></p>
                         <?php endif; ?>
-                        <a href="/request-quote.php?service=<?php echo $service['id']; ?>" class="btn btn-primary btn-sm">Plan this service</a>
+                        <a href="/request-quote?service=<?php echo $service['id']; ?>" class="btn btn-primary btn-sm">Plan this service</a>
                     </div>
                 </div>
             </div>
             <?php endforeach; ?>
         </div>
         <div class="text-center mt-5">
-            <a href="/services.php" class="btn btn-accent btn-lg"><i class="bi bi-columns-gap"></i> View the full service catalogue</a>
+            <a href="/services#service-commercial-cleaning" class="btn btn-accent btn-lg"><i class="bi bi-columns-gap"></i> View the full service catalogue</a>
         </div>
     </div>
 </section>
@@ -176,7 +176,7 @@ $featuredServices = array_slice($services, 0, 6);
                 <span class="section-heading">Simple process</span>
                 <h2 class="display-6 fw-bold mb-3">Booking SparklePro is effortless</h2>
                 <p class="mb-4">We streamline your booking so you can focus on what matters. Expect punctual teams, detailed checklists and proactive updates.</p>
-                <a href="/request-quote.php" class="btn btn-primary"><i class="bi bi-pencil-square"></i> Start your booking</a>
+                <a href="/request-quote" class="btn btn-primary"><i class="bi bi-pencil-square"></i> Start your booking</a>
             </div>
             <div class="col-lg-7">
                 <div class="row g-4">
@@ -212,39 +212,39 @@ $featuredServices = array_slice($services, 0, 6);
     <div class="container">
         <div class="text-center mb-5">
             <span class="section-heading">Service Areas</span>
-            <h2 class="display-6 fw-bold">Local crews across the lower North Island</h2>
-            <p class="lead">Rapid response teams are positioned across Manawatū, Tararua, Horowhenua and Rangitīkei for consistent results and travel efficiency.</p>
+            <h2 class="display-6 fw-bold">Your Wellington region specialists</h2>
+            <p class="lead">Rapid response teams cover Wellington City, Lower Hutt, Upper Hutt and Porirua for consistent results and swift scheduling.</p>
         </div>
         <div class="row g-4">
             <div class="col-md-3">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h6 class="fw-bold mb-2">Manawatū</h6>
-                        <p class="small mb-0">Palmerston North, Feilding, Ashhurst, Bunnythorpe and surrounding districts.</p>
+                        <h6 class="fw-bold mb-2">Wellington City</h6>
+                        <p class="small mb-0">Te Aro, Thorndon, Kelburn, Island Bay and CBD commercial towers.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h6 class="fw-bold mb-2">Tararua</h6>
-                        <p class="small mb-0">Dannevirke, Woodville, Pahiatua with regular rural runs for farm & lifestyle blocks.</p>
+                        <h6 class="fw-bold mb-2">Lower Hutt</h6>
+                        <p class="small mb-0">Petone, Seaview, Wainuiomata and industrial hubs throughout the Hutt Valley.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h6 class="fw-bold mb-2">Horowhenua</h6>
-                        <p class="small mb-0">Levin, Foxton, Shannon and commercial corridors along State Highway 1.</p>
+                        <h6 class="fw-bold mb-2">Upper Hutt</h6>
+                        <p class="small mb-0">Trentham, Silverstream, Wallaceville and lifestyle properties across the Hutt Valley.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h6 class="fw-bold mb-2">Rangitīkei</h6>
-                        <p class="small mb-0">Marton, Bulls and field service support for agricultural operations and workshops.</p>
+                        <h6 class="fw-bold mb-2">Porirua & Kapiti</h6>
+                        <p class="small mb-0">Porirua, Plimmerton, Whitby and coastal clients up to Paraparaumu and Waikanae.</p>
                     </div>
                 </div>
             </div>
@@ -264,21 +264,21 @@ $featuredServices = array_slice($services, 0, 6);
                 <div class="quote-card">
                     <div class="quote-icon mb-3"><i class="bi bi-chat-quote-fill"></i></div>
                     <p class="mb-4">“Our office has never looked sharper. SparklePro works around our schedule with zero disruption and the results are consistently impressive.”</p>
-                    <div class="testimonial-meta">Tricia Cochran<span>Operations Manager, Palmerston North</span></div>
+                    <div class="testimonial-meta">Tricia Cochran<span>Operations Manager, Wellington CBD</span></div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="quote-card">
                     <div class="quote-icon mb-3"><i class="bi bi-chat-quote-fill"></i></div>
                     <p class="mb-4">“Their builders clean was meticulous—hazards gone, dust eliminated, windows sparkling. The crew understood the site brief perfectly.”</p>
-                    <div class="testimonial-meta">Kelvin Richards<span>Project Supervisor, Tararua</span></div>
+                    <div class="testimonial-meta">Kelvin Richards<span>Project Supervisor, Lower Hutt</span></div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="quote-card">
                     <div class="quote-icon mb-3"><i class="bi bi-chat-quote-fill"></i></div>
                     <p class="mb-4">“We rely on SparklePro for carpets, upholstery and lawns. One call, multiple solutions—makes facilities management so much easier.”</p>
-                    <div class="testimonial-meta">Andrea Fields<span>Property Manager, Horowhenua</span></div>
+                    <div class="testimonial-meta">Andrea Fields<span>Property Manager, Porirua</span></div>
                 </div>
             </div>
         </div>
@@ -295,7 +295,7 @@ $featuredServices = array_slice($services, 0, 6);
                     <p class="mb-0">Book a site walk-through or request a detailed quote today. Our coordinators will confirm availability within two business hours.</p>
                 </div>
                 <div class="col-lg-4 text-lg-end">
-                    <a href="/request-quote.php" class="btn btn-accent btn-lg me-lg-3 mb-3 mb-lg-0"><i class="bi bi-calendar-event"></i> Schedule now</a>
+                    <a href="/request-quote" class="btn btn-accent btn-lg me-lg-3 mb-3 mb-lg-0"><i class="bi bi-calendar-event"></i> Schedule now</a>
                     <a href="tel:+642102588777" class="btn btn-outline-primary btn-lg"><i class="bi bi-telephone"></i> Talk to a specialist</a>
                 </div>
             </div>

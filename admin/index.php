@@ -104,7 +104,7 @@ $recentCVs = array_slice($recentCVs, 0, 5);
                         </tbody>
                     </table>
                 </div>
-                <a href="/admin/leads.php" class="btn btn-sm btn-primary">View All Leads</a>
+                <a href="/admin/leads" class="btn btn-sm btn-primary">View All Leads</a>
                 <?php endif; ?>
             </div>
         </div>
@@ -141,7 +141,7 @@ $recentCVs = array_slice($recentCVs, 0, 5);
                         </tbody>
                     </table>
                 </div>
-                <a href="/admin/cv-applications.php" class="btn btn-sm btn-primary">View All Applications</a>
+                <a href="/admin/cv-applications" class="btn btn-sm btn-primary">View All Applications</a>
                 <?php endif; ?>
             </div>
         </div>

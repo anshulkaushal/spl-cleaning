@@ -11,7 +11,7 @@ require_once __DIR__ . '/models/User.php';
 
 // Redirect if already logged in
 if (isLoggedIn()) {
-    header('Location: /account.php');
+    header('Location: /account');
     exit;
 }
 
@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Create user
     if (empty($errors)) {
         if ($userModel->create($name, $email, $phone, $address, $password)) {
-            redirectWithMessage('/login.php', 'Registration successful! Please login.');
+            redirectWithMessage('/login', 'Registration successful! Please login.');
         } else {
             $errors[] = 'Registration failed. Please try again.';
         }
@@ -126,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </form>
 
                     <div class="text-center mt-3">
-                        <p>Already have an account? <a href="/login.php">Login here</a></p>
+                        <p>Already have an account? <a href="/login">Login here</a></p>
                     </div>
                 </div>
             </div>

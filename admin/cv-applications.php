@@ -22,9 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ];
         
         if ($cvModel->update($id, $data)) {
-            redirectWithMessage('/admin/cv-applications.php', 'Application updated successfully');
+            redirectWithMessage('/admin/cv-applications', 'Application updated successfully');
         } else {
-            redirectWithMessage('/admin/cv-applications.php', 'Failed to update application', 'error');
+            redirectWithMessage('/admin/cv-applications', 'Failed to update application', 'error');
         }
     }
 }

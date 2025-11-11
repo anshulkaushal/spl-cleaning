@@ -30,9 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ];
         
         if ($scheduleModel->create($data)) {
-            redirectWithMessage('/admin/schedules.php', 'Schedule created successfully');
+            redirectWithMessage('/admin/schedules', 'Schedule created successfully');
         } else {
-            redirectWithMessage('/admin/schedules.php', 'Failed to create schedule', 'error');
+            redirectWithMessage('/admin/schedules', 'Failed to create schedule', 'error');
         }
     } elseif (isset($_POST['update_schedule'])) {
         $id = intval($_POST['schedule_id']);
@@ -49,9 +49,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ];
         
         if ($scheduleModel->update($id, $data)) {
-            redirectWithMessage('/admin/schedules.php', 'Schedule updated successfully');
+            redirectWithMessage('/admin/schedules', 'Schedule updated successfully');
         } else {
-            redirectWithMessage('/admin/schedules.php', 'Failed to update schedule', 'error');
+            redirectWithMessage('/admin/schedules', 'Failed to update schedule', 'error');
         }
     }
 }

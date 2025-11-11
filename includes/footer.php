@@ -5,7 +5,7 @@
             <div class="row g-4">
                 <div class="col-lg-4">
                     <h5 class="fw-bold mb-3"><i class="bi bi-sparkles text-accent"></i> SparklePro Cleaning Services</h5>
-                    <p class="mb-3">Creating healthier living and working environments with eco-conscious cleaning across Manawatū, Tararua, Horowhenua and Rangitīkei.</p>
+                    <p class="mb-3">Creating healthier living and working environments with eco-conscious cleaning across Wellington, Lower Hutt, Upper Hutt and Porirua.</p>
                     <div class="d-flex flex-column gap-2">
                         <span><i class="bi bi-telephone-outbound"></i> +64 210 258 8777</span>
                         <span><i class="bi bi-envelope-open"></i> hello@sparklepro.co.nz</span>
@@ -17,18 +17,18 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <ul class="list-unstyled d-grid gap-2">
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/services.php">Our Services</a></li>
-                                <li><a href="/request-quote.php">Book an Appointment</a></li>
-                                <li><a href="/request-quote.php?callback=1">Request a Call Back</a></li>
+                                <li><a href="/" class="text-light text-decoration-none">Home</a></li>
+                                <li><a href="/services" class="text-light text-decoration-none">Our Services</a></li>
+                                <li><a href="/request-quote" class="text-light text-decoration-none">Book an Appointment</a></li>
+                                <li><a href="/request-quote?callback=1" class="text-light text-decoration-none">Request a Call Back</a></li>
                             </ul>
                         </div>
                         <div class="col-sm-6">
                             <ul class="list-unstyled d-grid gap-2">
-                                <li><a href="/index.php#about">About Us</a></li>
-                                <li><a href="/index.php#areas">Service Areas</a></li>
-                                <li><a href="/join-our-team.php">Join Our Team</a></li>
-                                <li><a href="/login.php">Customer Login</a></li>
+                                <li><a href="/#about">About Us</a></li>
+                                <li><a href="/#areas">Service Areas</a></li>
+                                <li><a href="/join-our-team">Join Our Team</a></li>
+                                <li><a href="/login">Customer Login</a></li>
                             </ul>
                         </div>
                     </div>
@@ -38,18 +38,18 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <ul class="list-unstyled d-grid gap-2">
-                                <li>Commercial Cleaning</li>
-                                <li>Carpet Cleaning</li>
-                                <li>Upholstery Refresh</li>
-                                <li>End of Tenancy</li>
+                                <li><a href="/services#service-commercial-cleaning">Commercial Cleaning</a></li>
+                                <li><a href="/services#service-carpet-cleaning">Carpet Cleaning</a></li>
+                                <li><a href="/services#service-upholstery-cleaning">Upholstery Cleaning</a></li>
+                                <li><a href="/services#service-end-of-tenancy-cleaning">End of Tenancy Cleaning</a></li>
                             </ul>
                         </div>
                         <div class="col-sm-6">
                             <ul class="list-unstyled d-grid gap-2">
-                                <li>Builders Cleaning</li>
-                                <li>Pressure Washing</li>
-                                <li>Gutter Clear & Flush</li>
-                                <li>Lawn Mowing</li>
+                                <li><a href="/services#service-builders-cleaning">Builders Cleaning</a></li>
+                                <li><a href="/services#service-pressure-washing">Pressure Washing</a></li>
+                                <li><a href="/services#service-gutter-cleaning">Gutter Cleaning</a></li>
+                                <li><a href="/services#service-lawn-mowing">Lawn Mowing</a></li>
                             </ul>
                         </div>
                     </div>

@@ -23,9 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ];
         
         if ($leadModel->update($leadId, $data)) {
-            redirectWithMessage('/admin/leads.php', 'Lead updated successfully');
+            redirectWithMessage('/admin/leads', 'Lead updated successfully');
         } else {
-            redirectWithMessage('/admin/leads.php', 'Failed to update lead', 'error');
+            redirectWithMessage('/admin/leads', 'Failed to update lead', 'error');
         }
     }
 }

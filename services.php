@@ -10,6 +10,11 @@ require_once __DIR__ . '/models/Service.php';
 $serviceModel = new Service();
 $services = $serviceModel->getAll();
 
+function service_slug($name) {
+    $slug = strtolower(preg_replace('/[^a-z0-9]+/', '-', trim($name)));
+    return trim($slug, '-');
+}
+
 $detailBlocks = [
     'Commercial Cleaning' => [
         'Comprehensive daily, weekly or fortnightly programmes tailored to foot traffic and compliance requirements.',
@@ -63,7 +68,8 @@ $detailBlocks = [
 
     <div class="row g-4">
         <?php foreach ($services as $service): ?>
-        <div class="col-lg-6">
+        <?php $slug = service_slug($service['name']); ?>
+        <div class="col-lg-6" id="service-<?php echo $slug; ?>">
             <div class="card h-100">
                 <div class="card-body p-4 p-lg-5">
                     <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-3">
@@ -86,8 +92,8 @@ $detailBlocks = [
                     </ul>
                     <?php endif; ?>
                     <div class="d-flex flex-column flex-sm-row gap-3">
-                        <a href="/request-quote.php?service=<?php echo $service['id']; ?>" class="btn btn-primary"><i class="bi bi-journal-text"></i> Book this service</a>
-                        <a href="/request-quote.php" class="btn btn-outline-primary"><i class="bi bi-ui-checks"></i> Combine with other services</a>
+                        <a href="/request-quote?service=<?php echo $service['id']; ?>" class="btn btn-primary"><i class="bi bi-journal-text"></i> Book this service</a>
+                        <a href="/request-quote" class="btn btn-outline-primary"><i class="bi bi-ui-checks"></i> Combine with other services</a>
                     </div>
                 </div>
             </div>
@@ -105,7 +111,7 @@ $detailBlocks = [
                     <li><i class="bi bi-arrow-right-circle text-accent"></i> Dedicated supervisors for commercial accounts</li>
                     <li><i class="bi bi-arrow-right-circle text-accent"></i> Consolidated reporting and invoicing</li>
                 </ul>
-                <a href="/request-quote.php" class="btn btn-primary"><i class="bi bi-clipboard-data"></i> Request a proposal</a>
+                <a href="/request-quote" class="btn btn-primary"><i class="bi bi-clipboard-data"></i> Request a proposal</a>
             </div>
         </div>
         <div class="col-lg-4">
@@ -127,7 +133,7 @@ $detailBlocks = [
                     <strong>Book a consult</strong>
                     <span><i class="bi bi-telephone"></i> +64 210 258 8777</span>
                     <span><i class="bi bi-envelope"></i> hello@sparklepro.co.nz</span>
-                    <a href="/request-quote.php" class="btn btn-accent align-self-start"><i class="bi bi-chat-dots"></i> Speak to a specialist</a>
+                    <a href="/request-quote" class="btn btn-accent align-self-start"><i class="bi bi-chat-dots"></i> Speak to a specialist</a>
                 </div>
             </div>
         </div>

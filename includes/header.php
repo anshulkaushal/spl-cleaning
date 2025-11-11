@@ -33,11 +33,11 @@ $userName = $_SESSION['user_name'] ?? '';
             <div class="d-flex align-items-center gap-3">
                 <span><i class="bi bi-telephone-outbound"></i> +64 210 258 8777</span>
                 <span class="d-none d-lg-inline"><i class="bi bi-envelope-open"></i> hello@sparklepro.co.nz</span>
-                <span class="d-none d-xl-inline"><i class="bi bi-geo-alt"></i> Serving Manawatū, Tararua, Horowhenua & Rangitīkei</span>
+                <span class="d-none d-xl-inline"><i class="bi bi-geo-alt"></i> Serving Wellington, Lower Hutt, Upper Hutt & Porirua</span>
             </div>
             <div class="d-flex align-items-center gap-3">
-                <a href="/request-quote.php?callback=1" class="text-white"><i class="bi bi-clock-history"></i> Request a call back</a>
-                <a href="/request-quote.php" class="pill text-decoration-none">Book an appointment</a>
+                <a href="/request-quote?callback=1" class="text-white"><i class="bi bi-clock-history"></i> Request a call back</a>
+                <a href="/request-quote" class="pill text-decoration-none">Book an appointment</a>
             </div>
         </div>
     </div>
@@ -57,36 +57,36 @@ $userName = $_SESSION['user_name'] ?? '';
                         <a class="nav-link <?php echo $currentPage === 'index.php' ? 'active' : ''; ?>" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/index.php#about">About</a>
+                        <a class="nav-link" href="/#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo $currentPage === 'services.php' ? 'active' : ''; ?>" href="/services.php">Services</a>
+                        <a class="nav-link <?php echo $currentPage === 'services.php' ? 'active' : ''; ?>" href="/services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/index.php#areas">Service Areas</a>
+                        <a class="nav-link" href="/#areas">Service Areas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo $currentPage === 'join-our-team.php' ? 'active' : ''; ?>" href="/join-our-team.php">Join Our Team</a>
+                        <a class="nav-link <?php echo $currentPage === 'join-our-team.php' ? 'active' : ''; ?>" href="/join-our-team">Join Our Team</a>
                     </li>
                     <?php if ($isLoggedIn): ?>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo $currentPage === 'account.php' ? 'active' : ''; ?>" href="/account.php">
+                            <a class="nav-link <?php echo $currentPage === 'account.php' ? 'active' : ''; ?>" href="/account">
                                 <i class="bi bi-person-circle"></i> My Account
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/logout.php">Logout</a>
+                            <a class="nav-link" href="/logout">Logout</a>
                         </li>
                     <?php else: ?>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo $currentPage === 'login.php' ? 'active' : ''; ?>" href="/login.php">Login</a>
+                            <a class="nav-link <?php echo $currentPage === 'login.php' ? 'active' : ''; ?>" href="/login">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo $currentPage === 'register.php' ? 'active' : ''; ?>" href="/register.php">Register</a>
+                            <a class="nav-link <?php echo $currentPage === 'register.php' ? 'active' : ''; ?>" href="/register">Register</a>
                         </li>
                     <?php endif; ?>
                     <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary" href="/request-quote.php">
+                        <a class="btn btn-primary" href="/request-quote">
                             <i class="bi bi-calendar-check"></i> Get a quote
                         </a>
                     </li>
