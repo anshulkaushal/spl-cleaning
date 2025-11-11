@@ -260,7 +260,7 @@ body {
 }
 
 .hero-section {
-    background: linear-gradient(135deg, rgba(104, 198, 255, 0.9) 0%, rgba(42, 148, 233, 0.9) 60%, rgba(74, 205, 222, 0.95) 100%),
+    background: linear-gradient(135deg, rgba(14, 44, 86, 0.94) 0%, rgba(8, 81, 133, 0.94) 60%, rgba(15, 120, 170, 0.95) 100%),
                 url('https://images.unsplash.com/photo-1585421514738-01798e348b17?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
     color: #fff;
     padding: 96px 0;
@@ -282,7 +282,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(20, 79, 122, 0.25) 100%);
+    background: linear-gradient(180deg, rgba(10, 22, 40, 0.35) 0%, rgba(6, 31, 54, 0.55) 100%);
     pointer-events: none;
 }
 
@@ -302,6 +302,13 @@ body {
 .hero-section h1 {
     font-weight: 800;
     line-height: 1.08;
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.hero-section p,
+.hero-section .lead,
+.hero-section ul li {
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
 }
 
 .list-check {
@@ -517,6 +524,7 @@ footer a:hover {
     padding: 0.75rem 1.65rem;
     font-weight: 600;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 10px 25px rgba(11, 44, 86, 0.35);
 }
 
 .btn-primary:hover {
@@ -532,7 +540,8 @@ footer a:hover {
     font-weight: 600;
     border-color: var(--primary-color);
     color: var(--primary-color-dark);
-    background-color: rgba(25, 195, 255, 0.08);
+    background-color: rgba(21, 131, 216, 0.1);
+    box-shadow: 0 8px 20px rgba(7, 60, 98, 0.25);
 }
 
 .btn-outline-primary:hover {
